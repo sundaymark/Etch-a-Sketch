@@ -16,3 +16,9 @@
     border: 2px dotted rgb(135, 109, 135);
     border-radius: 40px;
 }
+
+.board{
+    width: 500px;
+    height: 500px;
+    display: grid;
+}
