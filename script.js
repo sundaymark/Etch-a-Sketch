@@ -1,9 +1,21 @@
-const board = document.querySelector('.board');
-board.style.gridTemplateColumns = "repeat(16,1fr)";
-board.style.gridTemplateRows = "repeat(16,1fr)";
+function populateBoard(size) {
+  const board = document.querySelector(".board");
+  board.style.gridTemplateColumns = `repeat(${size},1fr)`;
+  board.style.gridTemplateRows = `repeat(${size},1fr)`;
 
-for(let i = 0; i < 256;i++){
-    let boardAdd = document.createElement('div');
-    boardAdd.style.backgroundColor = 'blue';
-    board.appendChild(boardAdd)
+  for (let i = 0; i < 256; i++) {
+    let boardAdd = document.createElement("div");
+    boardAdd.addEventListener("mouseover", function () {
+      boardAdd.style.backgroundColor = "black";
+    });
+    boardAdd.style.backgroundColor = "blue";
+    board.appendChild(boardAdd);
+  }
+}
+populateBoard(16);
+
+function changeSize(input) {
+  if (input >= 2 && input <= 40) {
+    populateBoard(input);
+  } else alert("input must be between 2 and 40");
 }
