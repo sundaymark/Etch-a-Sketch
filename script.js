@@ -5,7 +5,7 @@ function populateBoard(size) {
 
   for (let i = 0; i < 256; i++) {
     let boardAdd = document.createElement("div");
-    boardAdd.addEventListener("mouseover", function () {
+    boardAdd.addEventListener("mouseover", () => {
       boardAdd.style.backgroundColor = "black";
     });
     boardAdd.style.backgroundColor = "blue";
