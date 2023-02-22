@@ -1,15 +1,16 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
-.heading{
+.heading {
     background-color: rgb(37, 54, 54);
     color: rgb(205, 234, 235);
     text-align: center;
 }
-.heading :hover{
+
+.heading :hover {
     background-color: rgb(48, 45, 64);
     color: rgb(207, 202, 202);
     padding: 10px;
@@ -17,7 +18,7 @@
     border-radius: 40px;
 }
 
-.board{
+.board {
     width: 500px;
     height: 500px;
     display: grid;
