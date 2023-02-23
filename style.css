@@ -23,3 +23,12 @@
     height: 500px;
     display: grid;
 }
+
+.container{
+    text-align: center;
+}
+
+.board{
+    margin: auto;
+    
+}
