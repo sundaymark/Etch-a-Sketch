@@ -1,13 +1,16 @@
-let color = "black";
+let color = "blue";
 function populateBoard(size) {
   const board = document.querySelector(".board");
-  board.style.gridTemplateColumns = `repeat(${size},1fr)`;
-  board.style.gridTemplateRows = `repeat(${size},1fr)`;
+  let gridSize = Math.round(size / 2);
+  board.style.gridTemplateColumns = `repeat(${gridSize},1fr)`;
+  board.style.gridTemplateRows = `repeat(${gridSize},1fr)`;
 
-  for (let i = 0; i < 256; i++) {
+  board.innerHTML = '';
+  for (let i = 0; i <= size; i++) {
     let boardAdd = document.createElement("div");
+    boardAdd.classList.add('cell');
     boardAdd.addEventListener("mouseover", colorSqare);
-    boardAdd.style.backgroundColor = "blue";
+    
     board.appendChild(boardAdd);
   }
 }
@@ -23,7 +26,8 @@ function colorSqare() {
   if (color == "random") {
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   } else {
-    this.style.backgroundColor = "color";
+    this.style.backgroundColor = color;
+    
   }
 }
 function changeColor(choice) {
